@@ -1,3 +1,8 @@
+#imgcenter
+{
+    text-align: center;
+}
+
 h1
 {
     font-size: xx-large;
@@ -7,5 +12,6 @@ h1
 
 img
 {
-    text-align: center;
+    height: 250px;
+    width: 250px;
 }
