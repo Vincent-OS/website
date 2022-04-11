@@ -1,0 +1,31 @@
+#imgcenter
+{
+    text-align: center;
+}
+
+h1
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+body
+{
+
+    background-color: black;
+    color: white;
+}
+
+/* img
+{
+    height: 200px;
+    width: 200px;
+} */
