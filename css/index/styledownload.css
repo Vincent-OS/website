@@ -1,0 +1,17 @@
+#imgcenter
+{
+    text-align: center;
+}
+
+body
+{
+
+    background-color: black;
+    color: white;
+}
+
+img
+{
+    height: 200px;
+    width: 200px;
+}
