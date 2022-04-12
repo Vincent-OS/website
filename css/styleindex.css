@@ -15,12 +15,6 @@
 #menu
 {
     background-color: black;
-    color: white;
-}
-
-#imgcenter
-{
-    text-align: center;
 }
 
 h1
@@ -45,11 +39,16 @@ body
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    color: white;
+    color: gray;
+    /* texte en gris temporaire */
 }
 
-/* img
+#imggithub
 {
-    height: 200px;
-    width: 200px;
-} */
+    text-align: right;
+}
+
+#imgdiscord
+{
+    text-align: right;
+}
