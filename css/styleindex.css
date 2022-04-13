@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: black;
 }
 
 #menu img
@@ -20,7 +20,7 @@
 {
     display: flex;
     text-align: center;
-    color: white;
+    color: black;
     flex-wrap: nowrap;
     justify-content: center;
 }
