@@ -9,12 +9,11 @@
 {
     width: 128px;
     height: 31px;
-    /* text-align: right; */
 }
 
 #menu
 {
-    background-color: yellow;
+    background-color: black;
 }
 
 h1
@@ -33,13 +32,11 @@ h2
 
 body
 {
-
     background-color: black;
     background-image: url("../img/index/background-floue.png");
     background-repeat: no-repeat;
     background-position: center;
-    color: gray;
-    /* texte en gris temporaire */
+    color: black;
 }
 
 #imggithub
