@@ -34,7 +34,7 @@ h2
 body
 {
 
-    background-color: black;
+    /*background-color: black; */
     background-image: url("../img/index/background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
