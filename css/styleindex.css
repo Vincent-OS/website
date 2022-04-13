@@ -17,6 +17,15 @@
     background-color: black;
 }
 
+#navbar
+{
+    display: flex;
+    text-align: center;
+    color: white;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 h1
 {
     font-size: xx-large;
