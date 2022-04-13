@@ -17,6 +17,14 @@
     color: white;
 }
 
+#flex_title
+{
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 body
 {
 
