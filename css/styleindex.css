@@ -9,7 +9,7 @@
 {
     width: 128px;
     height: 31px;
-    text-align: left;
+    /* text-align: right; */
 }
 
 #menu
@@ -35,7 +35,7 @@ body
 {
 
     background-color: black;
-    background-image: url("/img/index/background-floue.png");
+    background-image: url("../img/index/background-floue.png");
     background-repeat: no-repeat;
     background-position: center;
     color: gray;
