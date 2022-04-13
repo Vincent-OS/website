@@ -34,9 +34,8 @@ h2
 body
 {
 
-    /*background-color: black; */
-    background-image: url("../img/index/background.png");
-    background-attachment: fixed;
+    background-color: black;
+    background-image: url("../img/index/background-floue.png");
     background-repeat: no-repeat;
     background-position: center;
     color: gray;
@@ -49,6 +48,11 @@ body
 }
 
 #imgdiscord
+{
+    text-align: right;
+}
+
+#imgreddit
 {
     text-align: right;
 }

@@ -23,3 +23,24 @@ body
     background-color: black;
     color: white;
 }
+
+h1
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#discordlink
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}

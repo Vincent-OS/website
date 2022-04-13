@@ -36,7 +36,7 @@ body
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    color: white;
+    color: black;
 }
 
 h1
@@ -46,5 +46,6 @@ h1
 
 p
 {
+    font-size: larger;
     text-align: center;
 }
