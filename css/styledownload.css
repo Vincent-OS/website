@@ -18,6 +18,15 @@
     color: white;
 }
 
+#navbar
+{
+    display: flex;
+    text-align: center;
+    color: white;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 #imgcenter
 {
     text-align: center;
