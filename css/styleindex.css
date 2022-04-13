@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: white;
 }
 
 #menu img
@@ -14,15 +14,6 @@
 #menu
 {
     background-color: black;
-}
-
-#navbar
-{
-    display: flex;
-    text-align: center;
-    color: black;
-    flex-wrap: nowrap;
-    justify-content: center;
 }
 
 h1
@@ -41,10 +32,8 @@ h2
 
 body
 {
-
-    /*background-color: black; */
-    background-image: url("img/index/background.png");
-    background-attachment: fixed;
+    background-color: black;
+    background-image: url("../img/index/background-floue.png");
     background-repeat: no-repeat;
     background-position: center;
     color: black;
