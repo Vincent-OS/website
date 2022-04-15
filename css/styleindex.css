@@ -39,22 +39,9 @@ body
     color: black;
 }
 
-#imggithub
+#socialmedia
 {
-    text-align: right;
-}
-
-#imgdiscord
-{
-    text-align: right;
-}
-
-#imgreddit
-{
-    text-align: right;
-}
-
-#imgtwitter
-{
+    display: flex;
+    flex-wrap: nowrap;
     text-align: right;
 }
