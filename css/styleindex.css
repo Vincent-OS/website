@@ -1,9 +1,14 @@
 #top
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     color: white;
     background-color: black;
+}
+
+.element:nth-child(2)
+{
+    flex: 1;
 }
 
 #menu img
