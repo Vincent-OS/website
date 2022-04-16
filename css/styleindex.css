@@ -3,17 +3,13 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    background-color: black;
 }
 
 #menu img
 {
     width: 128px;
     height: 31px;
-}
-
-#menu
-{
-    background-color: black;
 }
 
 h1

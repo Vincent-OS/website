@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    background-color: black;
 }
 
 #menu img
@@ -10,11 +11,6 @@
     width: 128px;
     height: 31px;
     text-align: left;
-}
-
-#menu
-{
-    color: white;
 }
 
 body
