@@ -39,5 +39,5 @@ body
 {
     display: flex;
     flex-wrap: nowrap;
-    text-align: right;
+    justify-content: right;
 }
