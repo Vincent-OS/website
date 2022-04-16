@@ -18,11 +18,24 @@ body
 
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 h1
 {
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+}
+
+h2
+{
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contributors
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

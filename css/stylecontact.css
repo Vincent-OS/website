@@ -34,7 +34,14 @@ h2
     text-align: center;
 }
 
-#discordlink
+h3
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#link
 {
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
