@@ -17,6 +17,15 @@
     height: 31px;
 }
 
+body
+{
+    background-color: black;
+    background-image: url("../img/index/background-floue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
 h1
 {
     font-size: xx-large;
@@ -31,13 +40,9 @@ h2
     text-align: center;
 }
 
-body
+p
 {
-    background-color: black;
-    background-image: url("../img/index/background-floue.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    color: black;
+    text-align: center;
 }
 
 #socialmedia
