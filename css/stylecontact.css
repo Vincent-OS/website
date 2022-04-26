@@ -6,6 +6,11 @@
     background-color: black;
 }
 
+#void
+{
+    flex-grow: 1;
+}
+
 #menu img
 {
     width: 128px;

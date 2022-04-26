@@ -1,14 +1,35 @@
 #top
 {
-    display: flex;
-    justify-content: center;
-    color: white;
     background-color: black;
+    overflow: hidden;
 }
 
-.element:nth-child(2)
+#top a 
 {
-    flex: 1;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#top a:hover
+{
+    background-color: white;
+    color: black;
+}
+
+#top a.active
+{
+    background-color: green;
+    color: black;
+}
+
+#void
+{
+    flex-grow: 1;
 }
 
 #menu img
