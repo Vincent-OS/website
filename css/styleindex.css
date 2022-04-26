@@ -6,7 +6,7 @@
 
 #top a 
 {
-    float: right;
+    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -71,4 +71,12 @@ p
     display: flex;
     flex-wrap: nowrap;
     justify-content: right;
+}
+
+#footer
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }

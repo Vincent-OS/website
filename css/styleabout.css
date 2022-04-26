@@ -6,7 +6,7 @@
 
 #top a 
 {
-    float: right;
+    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -69,4 +69,12 @@ h2
 #contributors img
 {
     width: 128px;
+}
+
+#footer
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
