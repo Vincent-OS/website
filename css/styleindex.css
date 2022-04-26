@@ -40,11 +40,8 @@
 
 body
 {
-    background-color: black;
-    background-image: url("../img/index/background-floue.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    color: black;
+    background-color: gray;
+    color: white;
 }
 
 h1
