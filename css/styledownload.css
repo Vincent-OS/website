@@ -39,6 +39,11 @@
     text-align: left;
 }
 
+#menu img:hover
+{
+    background-color: black;
+}
+
 #imgcenter
 {
     text-align: center;
