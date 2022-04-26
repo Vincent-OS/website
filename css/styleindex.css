@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapi.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapi.com/css?family=Poppins:300,400,500,700');
 #top
 {
     background-color: black;
     overflow: hidden;
+    position: relative;
+    font-family: sans-serif;
 }
 
 #top a 
@@ -52,19 +56,20 @@ body
 h1
 {
     font-size: xx-large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
 }
 
 h2
 {
-    font-size: xx-large;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
 }
 
 p
 {
+    font-family: 'Roboto', Arial, sans-serif;
     text-align: center;
 }
 
