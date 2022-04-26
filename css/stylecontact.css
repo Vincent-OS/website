@@ -27,8 +27,8 @@
 
 #top a.active
 {
-    background-color: green;
-    color: black;
+    background-color: #008000;
+    color: white;
 }
 
 #void
