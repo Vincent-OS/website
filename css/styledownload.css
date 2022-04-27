@@ -62,7 +62,7 @@
 
 body
 {
-
+    margin: 0px;
     background-color: gray;
     color: white;
 }

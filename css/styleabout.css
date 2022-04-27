@@ -52,7 +52,7 @@
 
 body
 {
-
+    margin: 0px;
     background-color: gray;
     color: white;
     text-align: center;
@@ -68,6 +68,17 @@ h2
 {
     font-size: x-large;
     font-family: 'Poppins', Arial, sans-serif;
+}
+
+h3
+{
+    font-size: large;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+li
+{
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 p
