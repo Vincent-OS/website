@@ -21,12 +21,14 @@
 
 #top a:hover
 {
+    border: 2px solid white;
     background-color: white;
     color: black;
 }
 
 #top a.active
 {
+    border: 2px solid #008000;
     background-color: #008000;
     color: white;
 }
