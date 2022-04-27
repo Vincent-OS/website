@@ -89,7 +89,7 @@ p
 #footer
 {
     bottom: 0;
-    position: fixed;
+    position: static;
     width: 100%;
     background-color: black;
     color: white;
