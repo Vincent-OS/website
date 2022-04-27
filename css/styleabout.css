@@ -40,6 +40,10 @@
 
 #menu img
 {
+    padding-right: 16px;
+    padding-bottom: 0px;
+    padding-top: 8px;
+    padding-left: 16px;
     width: 128px;
     height: 31px;
     text-align: left;

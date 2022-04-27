@@ -1,8 +1,2 @@
 # Remove all .db files, we don't need that
 *.db
-
-# Temporary removing buttons
-buttons_about.png
-buttons_contact.png
-buttons_Download.png
-buttons_home.png
