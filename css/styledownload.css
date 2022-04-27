@@ -73,6 +73,12 @@ h1
     text-align: center;
 }
 
+h2
+{
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+}
+
 p
 {
     font-family: 'Roboto', Arial, sans-serif;
