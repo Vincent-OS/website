@@ -2,3 +2,4 @@ https://www.vincent-os.cf/index.html
 https://www.vincent-os.cf/pages/about.html
 https://www.vincent-os.cf/pages/contact.html
 https://www.vincent-os.cf/pages/download.html
+https://docs.vincent-os.cf/
