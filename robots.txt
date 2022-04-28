@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Disallow: /cdn-cgi/l/email-protection
+
+User-agent: msnbot-media
+Disallow: /cdn-cgi/l/email-protection
+
+User-agent: *
+Disallow: /cdn-cgi/l/email-protection
+
+Sitemap: https://www.vincent-os.cf/sitemap.txt
