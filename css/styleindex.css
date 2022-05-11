@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapi.com/css?family=Roboto:300,400,500,700');
-@import url('https://fonts.googleapi.com/css?family=Poppins:300,400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
 #top
 {
     background-color: black;
@@ -64,14 +63,14 @@ body
 h1
 {
     font-size: xx-large;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Roboto Flex', Arial, sans-serif;
     text-align: center;
 }
 
 h2
 {
     font-size: x-large;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Roboto Flex', Arial, sans-serif;
     text-align: center;
 }
 
