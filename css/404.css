@@ -56,7 +56,14 @@ body
     color: white;
 }
 
-h1 h2
+h1
+{
+    font-size: xx-large;
+    font-family: 'Roboto Flex', Arial, sans-serif;
+    text-align: center;
+}
+
+h2
 {
     font-size: xx-large;
     font-family: 'Roboto Flex', Arial, sans-serif;
@@ -64,6 +71,12 @@ h1 h2
 }
 
 p
+{
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+}
+
+a
 {
     font-family: 'Roboto', Arial, sans-serif;
     text-align: center;
