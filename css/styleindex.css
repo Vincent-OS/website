@@ -59,6 +59,11 @@
     display: none;
 }
 
+#top a.icon
+{
+    display: none;
+}
+
 #void
 {
     flex-grow: 1;
