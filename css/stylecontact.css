@@ -71,7 +71,7 @@ h2
     text-align: center;
 }
 
-h3
+p
 {
     font-size: large;
     font-family: 'Robotos', Arial, sans-serif;
@@ -80,9 +80,11 @@ h3
 
 #link
 {
-    font-size: x-large;
-    font-family: 'Robotos', Arial, sans-serif;
-    text-align: center;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #footer
