@@ -81,10 +81,9 @@ p
 #link
 {
     display: flex;
-    float: left;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 #footer
