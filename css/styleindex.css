@@ -21,14 +21,12 @@
 
 #top a:hover
 {
-    /*border-radius: 3px; n'est pas beau à voir*/
     background-color: white;
     color: black;
 }
 
 #top a.active
 {
-    /*border-radius: 3px; n'est pas beau à voir*/
     background-color: #008000;
     color: white;
 }

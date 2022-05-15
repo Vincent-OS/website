@@ -21,14 +21,12 @@
 
 #top a:hover
 {
-    /*border-radius: 3px; n'est pas beau à voir*/
     background-color: white;
     color: black;
 }
 
 #top a.active
 {
-    /*border-radius: 3px; n'est pas beau à voir*/
     background-color: #008000;
     color: white;
 }
@@ -78,12 +76,40 @@ p
     text-align: center;
 }
 
-#link
+#link a
 {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
 
+#link a:hover
+{
+    background-color: #000;
+}
+
+.Discord
+{
+    background-color: #7289DA;
+}
+
+.Twitter
+{
+    background-color: #1DA1F2;
+}
+
+.Reddit
+{
+    background-color: #FF4500;
+}
+
+.Github
+{
+    background-color: #181717;
 }
 
 #footer
