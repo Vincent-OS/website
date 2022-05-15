@@ -54,13 +54,6 @@
     color: white;
 }
 
-#top a.active
-{
-    /*border-radius: 3px; n'est pas beau à voir*/
-    background-color: #008000;
-    color: white;
-}
-
 #top a.icon
 {
     display: none;

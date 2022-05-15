@@ -1,7 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap');
+@media screen and (max-width: 600px)
+{
+    .top a:not(:first-child) {display: none;}
+    .top a.icon
+    {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    .top.responsive {position: relative;}
+    .top.responsive a.icon
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }   
+}
+
 #top
 {
-    width: 100%;
     background-color: black;
     overflow: hidden;
     position: relative;
@@ -31,6 +51,11 @@
     /*border-radius: 3px; n'est pas beau à voir*/
     background-color: #008000;
     color: white;
+}
+
+#top a.icon
+{
+    display: none;
 }
 
 #void
