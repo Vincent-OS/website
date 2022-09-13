@@ -105,6 +105,11 @@ p
     justify-content: center;
 }
 
+#Credits img
+{
+    width: 128px;
+}
+
 #footer
 {
     bottom: 0;
