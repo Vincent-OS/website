@@ -1,2 +1,2 @@
 # Vincent OS Website
-The website of Vincent OS
+The Vincent OS Website
