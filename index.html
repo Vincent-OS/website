@@ -1,59 +1,69 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-    <head>
-        <title> Vincent OS </title>
-        <meta name="description" content="Vincent OS is a Operating System made in C# via Cosmos. It has a unique desktop. And it has Windows Compatibility. All for free!">
-        <meta http-equiv='content-language' content='en-us'>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/styleindex.css" />
-        <link rel="icon" href="img/logo.png" type="image/x-icon">
-    </head>
-
-    <nav>
-        <div id="top">
-            <div id="menu">
-                <a href="https://vincent-os.cf" style="padding-bottom: 0px;padding-top: 8px;"><img src="../img/logo text.png" alt="logo" /></a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vincent OS </title>
+    <meta name="description" content="Vincent OS is a Operating System made in C# via Cosmos. It has a unique desktop. And it has Windows Compatibility. All for free!">
+    <meta http-equiv='content-language' content='en-us'>
+    <link rel="stylesheet" href="css/styleindex.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- NAVBAR SECTION-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">
+            <a href="https://vincent-os.cf"><img src="img/logo text.png" class="navbar__img" /></a>
             </div>
-            <div class="buttonhome">
+            <div class="navbar__item">
                 <a class="active" href="https://vincent-os.cf" title="Home Page" id="logo" data-hveid="8"> Home </a>
             </div>
-            <div class="buttondownload">
-                <a href="pages/download" title="Download Page" id="logo" data-hveid="8"> Download </a>
+            <div class="navbar__item">
+                <a href="pages/download.html" title="Download Page" id="logo" data-hveid="8"> Download </a>
             </div>
-            <div class="buttoncontact">
-                <a href="pages/contact" title="Conatct Page" id="logo" data-hveid="8"> Contact </a>
+            <div class="navbar__item">
+                <a href="pages/contact.html" title="Contact Page" id="logo" data-hveid="8"> Contact </a>
             </div>
-            <div class="buttonabout">
-                <a href="pages/about" title="About Page" id="logo" data-hveid="8"> About </a>
+            <div class="navbar__item">
+                <a href="pages/about.html" title="About Page" id="logo" data-hveid="8"> About </a>
             </div>
-            <div class="buttondoc">
+            <div class="navbar__item">
                 <a href="https://docs.vincent-os.cf" title="Documentation Page" id="logo" data-hveid="8"> Documentation </a>
             </div>
         </div>
     </nav>
+    
 
-    <body>
-        <h1>Vincent OS</h1>
-        <h2>A simple, minimalist, customizable distribution.</h2>
-        <br>
-        <!-- Uncomment when first GUI Desktop is here <div id="Desktop">
-            <a href="img/index/Desktop.png">
-                <img src="img/index/Desktop.png" alt="Desktop" height="360" width="640">
-            </a>
+    <!--HOME SECTION-->
+
+    <div class="home">
+        <div class="home__container">
+            <h1 class="V__1">VINCENT OS</h1>
+            <h1 class="V__2">VINCENT OS</h1>
+            <P>A simple, Minimalistic, Customizable Distribution</P>
         </div>
-        <br>-->
-        <p> Vincent OS is a Operating System made in C# via Cosmos.</p>
-        <br>
-        <p> It has a unique desktop. And it has Windows Compatibility. All for free!</p>
-        <br> <br>
-    </body>
+        <div class="home__download">
+            <p>Vincent OS is an Operating System Made in C# Via Cosmos.<br>
+                It Has a Unique Desktop with Windows Compatibility, All For Free!
+            </p>
 
+            <div class="home__button">
+                <button><a href="pages/download.html"> DOWNLOAD </a></button>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER SECTION-->
     <footer>
-        <div id="footer">
-            <p> © Vincent OS 2022</p>
-            <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
-            <p> Made by ❤ and hosted on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub Pages</a>.</p>
-        </div>
+        <footer class="footer__container">
+            <div id="footer">
+                <p> © Vincent OS 2022</p>
+                <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
+                <p> Made by ❤ and hosted on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub Pages</a>.</p>
+            </div>
+        </footer>
     </footer>
+</body>
 </html>

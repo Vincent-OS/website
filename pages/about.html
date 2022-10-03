@@ -1,125 +1,128 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-    <head>
-        <title> About - Vincent OS </title>
-        <meta name="description" content="Discover who are we and what Vincent OS can do.">
-        <meta http-equiv='content-language' content='en-us'>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/styleabout.css" />
-        <link rel="icon" href="../img/logo.png" type="image/x-icon">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Vincent OS </title>
+    <meta name="description" content="Discover who are we and what Vincent OS can do.">
+    <meta http-equiv='content-language' content='en-us'>
+    <link rel="stylesheet" href="../css/styleabout.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
 
-    <nav>
-        <div id="top">
-            <div id="menu">
-                <a href="https://vincent-os.cf" style="padding-bottom: 0px;padding-top: 8px;"><img src="../img/logo text.png" alt="logo" /></a>
+        <!-- NAVBAR SECTION-->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="navbar__logo">
+                <a href="https://vincent-os.cf"><img src="../img/logo text.png" class="navbar__img" /></a>
+                </div>
+                <div class="navbar__item">
+                    <a href="https://vincent-os.cf" title="Home Page" id="logo" data-hveid="8"> Home </a>
+                </div>
+                <div class="navbar__item">
+                    <a href="../pages/download.html" title="Download Page" id="logo" data-hveid="8"> Download </a>
+                </div>
+                <div class="navbar__item">
+                    <a  href="../pages/contact.html" title="Contact Page" id="logo" data-hveid="8"> Contact </a>
+                </div>
+                <div class="navbar__item">
+                    <a class="active" href="../pages/about.html" title="About Page" id="logo" data-hveid="8"> About </a>
+                </div>
+                <div class="navbar__item">
+                    <a href="https://docs.vincent-os.cf" title="Documentation Page" id="logo" data-hveid="8"> Documentation </a>
+                </div>
             </div>
-            <div class="buttonhome">
-                <a href="https://vincent-os.cf" title="Home Page" id="logo" data-hveid="8"> Home </a>
+        </nav>
+
+        <!--HOME SECTION-->
+
+        <div class="about">
+            <div class="about__vincent">
+                <h1>About Vincent OS (FAQ)</h1>
+                <h3>What is Vincent OS?</h3>
+                <p>Vinent os is an Operating System developed by v38armageddon.</p>
             </div>
-            <div class="buttondownload">
-                <a href="../pages/download" title="Download Page" id="logo" data-hveid="8"> Download </a>
+            <div class="about__features">
+                <h3>What Are the Features of Vincent OS?</h3>
+                <p>By default, Vincent OS includes:</p>
+                <ul>
+                    <li> Custom Kernel.</li>
+                    <li> Windows Application Compatibility.</li>
+                    <li> Unique desktop.</li>
+                </ul>
             </div>
-            <div class="buttoncontact">
-                <a href="../pages/contact" title="Conatct Page" id="logo" data-hveid="8"> Contact </a>
+            <div class="about__contributors">
+                <h3>Contributors:</h3>
+                <div id="contributors">
+                    <div id="v38armageddon">
+                        <div class="img">
+                            <img src="../img/about/v38armageddon.jpg" alt="v38armageddon">
+                        </div>
+                        <div class="text">
+                            <h4> v38armageddon </h4>
+                            <p> Founder</p>
+                        </div>
+                    </div>
+                    <div id="WinsInfo">
+                        <div class="img">
+                            <img src="../img/about/winsinfo.jpg" alt="Win's Info">
+                        </div>
+                        <div class="text">
+                            <h4> Win's Info</h4>
+                            <p> Website Co-Developer</p>
+                            <p> Beta tester</p>
+                        </div>
+                    </div>
+                    <div id="Foxit">
+                        <div class="img">
+                            <img src="../img/about/foxit.png" alt="Foxit">
+                        </div>
+                        <div class="text">
+                            <h4> Foxit</h4>
+                            <p> Beta Tester</p>
+                        </div>
+                    </div>
+                    <div id="Keraunxs">
+                        <div class="img">
+                            <img src="../img/about/Keraunos420.jpg" alt="KERAUNXS">
+                        </div>
+                        <div class="text">
+                            <h4> KERAUNXS</h4>
+                            <p> Designer</p>
+                            <p> Web developer</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="buttonabout">
-                <a class="active" href="../pages/about" title="About Page" id="logo" data-hveid="8"> About </a>
-            </div>
-            <div class="buttondoc">
-                <a href="https://docs.vincent-os.cf" title="Documentation Page" id="logo" data-hveid="8"> Documentation </a>
+            <div class="about__credits">
+                <h2>Credits:</h2>
+                <p>Big Thanks to the following person for creating the wallpapers used in the project</p>
+                <div id="Credits">
+                    <div id="ZeyaTsu">
+                        <div class="img">
+                            <img src="../img/about/zeyatsu.png" alt="ZeyaTsu">
+                        </div>
+                        <div class="text">
+                            <h4> ZeyaTsu</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+       
 
-    <body>
-        <h1> About Vincent OS.</h1>
-        <h2> Discover who are we and what Vincent OS can do.</h2>
-        <br> <br> <br>
-        <h3> What is Vincent OS?</h3>
-        <p> Vincent OS is a Operating System who was developped by v38armageddon.</p>
-        <br> <br>
-        <h3> What are features of Vincent OS?</h3>
-        <p> Vincent OS include by default:</p>
-        <ul>
-            <li> Custom Kernel.</li>
-            <li> Windows Application Compatibility.</li>
-            <li> Unique desktop.</li>
-        </ul>
-        <br>
-        <!-- See when developping<p> You can also install additional software if you don't like the minimum configuration:</p>
-        <ul>
-            <li> Office configuration.</li>
-            <li> Gaming configuration.</li>
-            <li> Media configuration.</li>
-            <li> Developper configuration.</li>
-        </ul>
-        <br>--> <br> <br> <br>
-        <h2> The Vincent OS Contributors</h2>
-        <br>
-        <div id="contributors">
-            <div id="v38armageddon">
-                <div class="img">
-                    <img src="../img/about/v38armageddon.jpg" alt="v38armageddon">
-                </div>
-                <div class="text">
-                    <p> v38armageddon </p>
-                    <p> The Founder of Vincent OS.</p>
-                </div>
-            </div>
-            <div id="WinsInfo">
-                <div class="img">
-                    <img src="../img/about/winsinfo.jpg" alt="Win's Info">
-                </div>
-                <div class="text">
-                    <p> Win's Info</p>
-                    <p> Co-Developper of the Website.</p>
-                    <p> Beta tester.</p>
-                </div>
-            </div>
-            <div id="Foxit">
-                <div class="img">
-                    <img src="../img/about/foxit.png" alt="Foxit">
-                </div>
-                <div class="text">
-                    <p> Foxit</p>
-                    <p> Beta Tester.</p>
-                </div>
-            </div>
-            <div id="Keraunos">
-                <div class="img">
-                    <img src="../img/about/Keraunos420.jpg" alt="Keraunos420">
-                </div>
-                <div class="text">
-                    <p> Keraunos420</p>
-                    <p> Designer.</p>
-                    <p> Web developper.</p>
-                </div>
-            </div>
-        </div>
-        <br>
-        <h2> Credits </h2>
-        <br>
-        <p> The following projects is used in Vincent OS, we say a big thanks to:</p>
-        <div id="Credits">
-            <div id="ZeyaTsu">
-                <div class="img">
-                    <img src="../img/about/zeyatsu.png" alt="ZeyaTsu">
-                </div>
-                <div class="text">
-                    <p> ZeyaTsu</p>
-                    <p> Wallpapers.</p>
-                </div>
-            </div>
-        </div>
-    </body>
-
+            <!--FOOTER SECTION-->
     <footer>
-        <div id="footer">
-            <p> © Vincent OS 2022</p>
-            <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
-            <p> Made by ❤ and heberged on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub</a>.</p>
-        </div>
+        <footer class="footer__container">
+            <div id="footer">
+                <p> © Vincent OS 2022</p>
+                <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
+                <p> Made by ❤ and hosted on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub Pages</a>.</p>
+            </div>
+        </footer>
     </footer>
+</body>
 </html>

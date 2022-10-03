@@ -69,8 +69,6 @@
 /* FOOTER SECTION */
 
 footer {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     bottom: 0;
     position: static;
@@ -93,65 +91,41 @@ footer {
     color: var(--white);
 }
 
-/*HOME SECTION*/
+/* HOME SECTION */
+
 body{
     margin: 0;
     background-color: var(--darkgray);
 }
 
-
-
-.contact{
+.error {
     height: 80vh;
     width: 100%;
     display: block;
     text-align: center;
-    padding:  50px;
+    margin:0px;
+    font-family: 'TwCenMTStd';
     color: var(--white);
     font-size: 1.3rem;
 }
 
-.contact p{
-    margin-top: 2%;
-    font-family: "TwCenMTStd", sans-serif;
+.error__container {
+    padding-top: 60px;
 }
 
-.contact a{
-    color: var(--white);
+.error__container h1 {
+    font-size: 3rem;
 }
 
-.contact__socialmedia{
-    font-family: "TwCenMTStd", sans-serif;
-    padding-top: 50px;
-    flex-wrap: wrap;
-    position: inherit;
-}
-
-.contact__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    flex-wrap: wrap;
-}
-
-.contact__links a {
-    text-decoration: none;
-    margin: 20px 0px;
+.error__container h2 {
     padding: 10px;
 }
 
+.error__container p {
+    padding: 40px;
+}
 
-@media screen and (max-width: 720px) {
-    .contact{
-        height: auto;
-    }
-
-    .contact p {
-        margin-top: 100px;
-    }
-
-    .contact__links a {
-        margin: 0px;
-    }
+.error__container a {
+    color: var(--white);
+    font-size: 1.3rem;
 }

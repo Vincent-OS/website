@@ -1,60 +1,69 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-    <head>
-        <title> Contact - Vincent OS </title>
-        <meta name="description" content="You can contact the Vincent OS team here.">
-        <meta http-equiv='content-language' content='en-us'>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/stylecontact.css" />
-        <link rel="icon" href="../img/logo.png" type="image/x-icon">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Vincent OS </title>
+    <meta name="description" content="You can contact the Vincent OS team here.">
+    <meta http-equiv='content-language' content='en-us'>
+    <link rel="stylesheet" href="../css/stylecontact.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
 
-    <nav>
-        <div id="top">
-            <div id="menu">
-                <a href="https://vincent-os.cf" style="padding-bottom: 0px;padding-top: 8px;"><img src="../img/logo text.png" alt="logo" /></a>
+        <!-- NAVBAR SECTION-->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="navbar__logo">
+                <a href="https://vincent-os.cf"><img src="../img/logo text.png" class="navbar__img" /></a>
+                </div>
+                <div class="navbar__item">
+                    <a href="https://vincent-os.cf" title="Home Page" id="logo" data-hveid="8"> Home </a>
+                </div>
+                <div class="navbar__item">
+                    <a href="../pages/download.html" title="Download Page" id="logo" data-hveid="8"> Download </a>
+                </div>
+                <div class="navbar__item">
+                    <a class="active" href="../contact.html" title="Contact Page" id="logo" data-hveid="8"> Contact </a>
+                </div>
+                <div class="navbar__item">
+                    <a href="../pages/about.html" title="About Page" id="logo" data-hveid="8"> About </a>
+                </div>
+                <div class="navbar__item">
+                    <a href="https://docs.vincent-os.cf" title="Documentation Page" id="logo" data-hveid="8"> Documentation </a>
+                </div>
             </div>
-            <div class="buttonhome">
-                <a href="https://vincent-os.cf" title="Home Page" id="logo" data-hveid="8"> Home </a>
-            </div>
-            <div class="buttondownload">
-                <a href="../pages/download" title="Download Page" id="logo" data-hveid="8"> Download </a>
-            </div>
-            <div class="buttoncontact">
-                <a class="active" href="../pages/contact" title="Conatct Page" id="logo" data-hveid="8"> Contact </a>
-            </div>
-            <div class="buttonabout">
-                <a href="../pages/about" title="About Page" id="logo" data-hveid="8"> About </a>
-            </div>
-            <div class="buttondoc">
-                <a href="https://docs.vincent-os.cf" title="Documentation Page" id="logo" data-hveid="8"> Documentation </a>
+        </nav>
+        
+    <!--HOME SECTION-->
+
+    <div class="contact">
+        <p>For any questions of business inquiries, you can contact us via <a href="mailto:contact@vincent-os.cf"> e-mail.</a></p>
+
+        <div class="contact__socialmedia">
+            <h1>Our Social Media:</h1>
+            <div class="contact__links">
+                <a href="https://discord.gg/YMpAM8qT8E" title="Go to the Discord server" id="logo" data-hveid="8" class="fab fa-discord"></a>
+            <br>
+            <a href="https://twitter.com/VincentOS_" title="Go to the Twitter account" id="logo" data-hveid="8" class="fab fa-twitter"></a>
+            <br>
+            <a href="https://www.reddit.com/r/VincentOS/" title="Go to the Subreddit" id="logo" data-hveid="8" class="fab fa-reddit"></a>
+            <br>
+            <a href="https://github.com/Vincent-OS" title="Go to the GitHub page" id="logo" data-hveid="8" class="fab fa-github"></a>
             </div>
         </div>
-    </nav>
-    
-    <body>
-        <h1>Contact.</h1>
-        <p>You can contact us via <a href="mailto:contact@vincent-os.cf"> e-mail</a></p>
-        <br>
-        <h2> Our Social Media.</h2>
-        <div id="link">
-            <a href="https://discord.gg/YMpAM8qT8E" title="Go to the Discord server" id="logo" data-hveid="8"><img src="../img/contact/logo discord.png" alt="Discord Server" data-atf="1" data-frt="0" width="50" height="50"></a>
-            <br>
-            <a href="https://twitter.com/VincentOS_" title="Go to the Twitter account" id="logo" data-hveid="8"><img src="../img/contact/logo twitter.png" alt="Twitter" data-atf="1" data-frt="0" width="50" height="45"></a>
-            <br>
-            <a href="https://www.reddit.com/r/VincentOS/" title="Go to the Subreddit" id="logo" data-hveid="8"><img src="../img/contact/logo reddit.png" alt="Subreddit" data-atf="1" data-frt="0" width="50" height="50"></a>
-            <br>
-            <a href="https://github.com/Vincent-OS" title="Go to the GitHub page" id="logo" data-hveid="8"><img src="../img/contact/logo github.png" alt="GitHub" data-atf="1" data-frt="0" width="50" height="50"></a>
-        </div>
-        <br>
-    </body>
-
+    </div>
+    <!--FOOTER SECTION-->
     <footer>
-        <div id="footer">
-            <p> © Vincent OS 2022</p>
-            <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
-            <p> Made by ❤ and heberged on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub</a>.</p>
-        </div>
+        <footer class="footer__container">
+            <div id="footer">
+                <p> © Vincent OS 2022</p>
+                <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
+                <p> Made by ❤ and hosted on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub Pages</a>.</p>
+            </div>
+        </footer>
     </footer>
+</body>
 </html>
