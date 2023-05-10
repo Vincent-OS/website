@@ -7,4 +7,4 @@ Disallow: /cdn-cgi/l/email-protection
 User-agent: *
 Disallow: /cdn-cgi/l/email-protection
 
-Sitemap: https://vincent-os.v38armageddon.cf/sitemap.txt
+Sitemap: https://vincent-os.v38armageddon.net/sitemap.txt
