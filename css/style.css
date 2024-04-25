@@ -67,7 +67,7 @@ h2 {
 .navbar__item a.active
 {
     background-color: var(--darkgreen);
-    color: var(--black);
+    color: var(--white);
 }
 
 
