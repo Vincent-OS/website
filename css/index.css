@@ -17,20 +17,11 @@ body{
     font-family: 'TwCenMTStd', sans-serif;
 }
 
-.V__1{
+h1{
     color: var(--white);
-    font-size: 5rem;
+    font-size: 2rem;
     transition: 0.5s;
 }
-
-.V__2{
-    color: var(--black);
-    font-size: 5rem;
-    line-height: 30%;
-    transform: scaleY(-1);
-    transition: 0.5s;
-}
-
 
 .home__container p {
     padding-top: 30px;

@@ -85,9 +85,24 @@ h2 {
 
 /* FOOTER SECTION */
 footer {
-    margin: 0;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    position: static;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    font-family: Avenir, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+footer a {
+    color: var(--white);
 }
 
 .footer__container{
