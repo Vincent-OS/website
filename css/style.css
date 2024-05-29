@@ -1,3 +1,20 @@
+/*
+ * Vincent OS Website, The website of Vincent OS.
+ * Copyright (C) 2022 - 2024 - v38armageddon
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 :root {
     --black: #000000;
     --darkgray: #1d2f30;
@@ -26,6 +43,7 @@
 
 body {
     font-family: Segoe UI, Arial, sans-serif;
+    color: var(--white);
 }
 
 h1 {
@@ -38,7 +56,7 @@ h2 {
 
 .navbar {
     background: var(--black);
-    height: 50px;
+    height: 52px;
     position: relative;
     top: 0;
     z-index: 999;
@@ -46,7 +64,7 @@ h2 {
 
 
 .navbar__item a{
-    font-family: sans-serif;
+    font-family: Avenir, Arial, sans-serif;
     float: left;
     display: block;
     color: white;
@@ -85,18 +103,13 @@ h2 {
 
 /* FOOTER SECTION */
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 18px;
+    white-space: nowrap;
+    line-height: 20px;
 }
 
 footer p {
-    font-family: Avenir, sans-serif;
+    font-family: Avenir, Arial, sans-serif;
     font-size: 1rem;
     text-decoration: none;
 }
@@ -113,7 +126,7 @@ footer a {
 }
 
 .footer__container p {
-    font-family: Avenir, sans-serif;
+    font-family: Avenir, Arial, sans-serif;
     font-size: 1rem;
     text-decoration: none;
 }
