@@ -184,7 +184,6 @@ h1{
     }
 }
 
-/* FOOTER SECTION */
 @media screen and (max-width: 720px) {
     .home__container p {
         font-size: 2rem;
