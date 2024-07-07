@@ -16,49 +16,53 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 /* HOME SECTION */
-body{
+body {
     background-color: var(--darkgray);
 }
 
-.home{
-    width:100%;
-    height: 80vh;
-    background-image: radial-gradient(circle at bottom center, #1c7c70, #1d2f30 60%);
-}
-
-.home__container{
-    display: block;
-    text-align: center;
-    padding-top: 80px;
-    font-family: 'TwCenMTStd', sans-serif;
-}
-
-h1{
+h1 {
     color: var(--white);
     font-size: 2rem;
     transition: 0.5s;
 }
 
+a {
+    color: #5cba47;
+}
+
+.home {
+    width:100%;
+    height: 80vh;
+    background-image: radial-gradient(circle at bottom center, #1c7c70, #1d2f30 60%);
+}
+
+.home__container {
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+    /*font-family: 'TwCenMTStd', sans-serif;*/
+}
+
 .home__container p {
     padding-top: 30px;
     font-size: 2.5rem;
-    font-family: 'TwCenMTStd-MediumCond', sans-serif;
+    /*font-family: 'TwCenMTStd-MediumCond', sans-serif;*/
 }
 
-.home__download{
+.home__download {
     display: block;
     text-align: center;
     padding: 20px;
 }
 
-.home__download p{
+.home__download p {
     padding: 30px;
     color: white;
-    font-family: 'TwCenMTStd', sans-serif;
+    /*font-family: 'TwCenMTStd', sans-serif;*/
     font-size: 100%;
 }
 
-.home__button{
+.home__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +75,7 @@ h1{
 }
 
 .home__button button {
-    font-family: 'TwCenMTStd', sans-serif;
+    /*font-family: 'TwCenMTStd', sans-serif;*/
     font-size: 2rem;
     text-decoration: none;
     padding: 20px 80px;
@@ -90,6 +94,12 @@ h1{
     0 0 25px #6ccc57,
     0 0 50px #6ccc57,
     0 0 200px #6ccc57;
+}
+
+.sizeImg {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
 }
 
 /* SLIDE SECTION*/
@@ -188,7 +198,11 @@ h1{
     .home__container p {
         font-size: 2rem;
     }
-
+    
+    .home__container img {
+        width: 100%;
+    }
+    
     .home__button button {
         padding: 15px 25px;
     }

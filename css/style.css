@@ -106,6 +106,7 @@ footer {
     width: 100%;
     white-space: nowrap;
     line-height: 20px;
+    text-wrap: wrap;
 }
 
 footer p {
@@ -133,4 +134,10 @@ footer a {
 
 .footer__container a {
     color: var(--white);
+}
+
+.fImg {
+    max-width: 50%;
+    width: 15%;
+    height: auto;
 }
