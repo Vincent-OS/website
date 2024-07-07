@@ -1,0 +1,109 @@
+/*
+ * Vincent OS Website, The website of Vincent OS.
+ * Copyright (C) 2022 - 2024 - v38armageddon
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+/* HOME SECTION*/
+body{
+    background-color: var(--darkgray);
+}
+
+li {
+    list-style-type: none;
+}
+
+.download{
+    display: block;
+    text-align: center;
+    padding: 4% 50px;
+    color: var(--white);
+}
+
+.download__v1 {
+    padding-bottom: 50px;
+    font-size: 1.3rem;
+}
+
+.download__v1 p {
+    padding-top: 2%;
+}
+
+.download__legacy {
+    font-size: 1.3rem;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.download__legacy p {
+    padding-top: 2%;
+}
+
+.download__icons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#legacy {
+    padding: 20px;
+}
+
+.download__github{
+    display: flex;
+    justify-content: flex-start;
+    color: var(--black);
+    align-items: center;
+    width: 250px;
+    height: 80px;
+    background-color: var(--white);
+    position: relative;
+    border: none;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.download__github button{
+    text-decoration: none;
+    border: none;
+    background-color: var(--white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.download__github:hover {
+    margin: 15px 20px 15px 20px;
+}
+
+.download__github div{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+@media screen and (max-width: 720px) {
+    .download {
+        margin-top: 100px;
+    }
+
+    #legacy {
+        padding:30px 0px 0px 0px;
+    }
+}

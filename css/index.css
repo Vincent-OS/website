@@ -1,0 +1,209 @@
+/*
+ * Vincent OS Website, The website of Vincent OS.
+ * Copyright (C) 2022 - 2024 - v38armageddon
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+/* HOME SECTION */
+body {
+    background-color: var(--darkgray);
+}
+
+h1 {
+    color: var(--white);
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+a {
+    color: #5cba47;
+}
+
+.home {
+    width:100%;
+    height: 80vh;
+    background-image: radial-gradient(circle at bottom center, #1c7c70, #1d2f30 60%);
+}
+
+.home__container {
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+    /*font-family: 'TwCenMTStd', sans-serif;*/
+}
+
+.home__container p {
+    padding-top: 30px;
+    font-size: 2.5rem;
+    /*font-family: 'TwCenMTStd-MediumCond', sans-serif;*/
+}
+
+.home__download {
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+.home__download p {
+    padding: 30px;
+    color: white;
+    /*font-family: 'TwCenMTStd', sans-serif;*/
+    font-size: 100%;
+}
+
+.home__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.home__button a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.home__button button {
+    /*font-family: 'TwCenMTStd', sans-serif;*/
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 20px 80px;
+    border: none;
+    outline: none;
+    background: #6ccc57;
+    background: -webkit-linear-gradient(to top, #3b973f, #6ccc57);
+    background: linear-gradient(to top, #3b973f, #6ccc57);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.home__button button:hover {
+    background: var(--lightgreen);
+    box-shadow: 0 0 5px #6ccc57,
+    0 0 25px #6ccc57,
+    0 0 50px #6ccc57,
+    0 0 200px #6ccc57;
+}
+
+.sizeImg {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* SLIDE SECTION*/
+.slideshow_container {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .home__container p {
+        font-size: 2rem;
+    }
+    
+    .home__container img {
+        width: 100%;
+    }
+    
+    .home__button button {
+        padding: 15px 25px;
+    }
+}
