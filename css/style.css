@@ -63,7 +63,7 @@ h2 {
 }
 
 
-.navbarItem a{
+.navbar__item a{
     font-family: Avenir, Arial, sans-serif;
     float: left;
     display: block;
@@ -75,27 +75,27 @@ h2 {
     background-color: #000000;
 }
 
-.navbarItem a:hover
+.navbar__item a:hover
 {
     background-color: white;
     color: black;
     transition: 0.3s;
 }
 
-.navbarItem a.active
+.navbar__item a.active
 {
     background-color: var(--darkgreen);
     color: var(--white);
 }
 
 
-.navbarLogo{
+.navbar__logo{
     float: left;
     padding: 5px 16px;
 
 }
 
-.navbarImg
+.navbar__img
 {
     width: 128px;
     height: 31px;
@@ -119,20 +119,20 @@ footer a {
     color: var(--white);
 }
 
-.footerContainer{
+.footer__container{
     background-color: black;
     color: white;
     text-align: center;
     padding: 18px;
 }
 
-.footerContainer p {
+.footer__container p {
     font-family: Avenir, Arial, sans-serif;
     font-size: 1rem;
     text-decoration: none;
 }
 
-.footerContainer a {
+.footer__container a {
     color: var(--white);
 }
 
