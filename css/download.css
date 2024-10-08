@@ -31,26 +31,26 @@ li {
     color: var(--white);
 }
 
-.download__v1 {
+.downloadV1 {
     padding-bottom: 50px;
     font-size: 1.3rem;
 }
 
-.download__v1 p {
+.downloadV1 p {
     padding-top: 2%;
 }
 
-.download__legacy {
+.downloadLegacy {
     font-size: 1.3rem;
     padding: 2%;
     flex-wrap: wrap;
 }
 
-.download__legacy p {
+.downloadLegacy p {
     padding-top: 2%;
 }
 
-.download__icons{
+.downloadIcons{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -61,7 +61,7 @@ li {
     padding: 20px;
 }
 
-.download__github{
+.downloadGithub{
     display: flex;
     justify-content: flex-start;
     color: var(--black);
@@ -79,7 +79,7 @@ li {
 }
 
 
-.download__github button{
+.downloadGithub button{
     text-decoration: none;
     border: none;
     background-color: var(--white);
@@ -89,11 +89,11 @@ li {
     font-weight: bold;
 }
 
-.download__github:hover {
+.downloadGithub:hover {
     margin: 15px 20px 15px 20px;
 }
 
-.download__github div{
+.downloadGithub div{
     font-size: 2rem;
     color: var(--black);
 }
