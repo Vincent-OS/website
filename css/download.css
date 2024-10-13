@@ -56,7 +56,6 @@ li {
     flex-wrap: wrap;
 }
 
-
 #legacy {
     padding: 20px;
 }
@@ -78,7 +77,6 @@ li {
     transition: 0.5s;
 }
 
-
 .download__github button{
     text-decoration: none;
     border: none;
@@ -96,6 +94,64 @@ li {
 .download__github div{
     font-size: 2rem;
     color: var(--black);
+}
+
+#downloadButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 20px 80px;
+    border: none;
+    outline: none;
+    background: #6ccc57;
+    background: -webkit-linear-gradient(to top, #3b973f, #6ccc57);
+    background: linear-gradient(to top, #3b973f, #6ccc57);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#downloadButton a {
+    text-decoration: none;
+    color: white;
+}
+
+#downloadButton:hover {
+    background: var(--lightgreen);
+    box-shadow: 0 0 5px #6ccc57,
+    0 0 25px #6ccc57,
+    0 0 50px #6ccc57,
+    0 0 200px #6ccc57;
+}
+
+#downloadButtonLegacy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 20px 80px;
+    border: none;
+    outline: none;
+    background: #d88129;
+    background: -webkit-linear-gradient(to top, #c36d28, #d88129);
+    background: linear-gradient(to top, #c36d28, #d88129);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#downloadButtonLegacy a {
+    text-decoration: none;
+    color: white;
+}
+
+#downloadButtonLegacy:hover {
+    background: #d88129;
+    box-shadow: 0 0 5px #d88129,
+    0 0 25px #d88129,
+    0 0 50px #d88129,
+    0 0 200px #d88129;
 }
 
 /* Mobile Section */
