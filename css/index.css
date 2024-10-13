@@ -40,14 +40,11 @@ a {
     display: block;
     text-align: center;
     padding-top: 80px;
-    /*font-family: 'TwCenMTStd', sans-serif;*/
 }
 
 .home__container p {
     padding-top: 30px;
-    font-size: 2.5rem;
-    /*font-family: 'TwCenMTStd-MediumCond', sans-serif;*/
-}
+    font-size: 2.5rem;}
 
 .home__download {
     display: block;
@@ -58,7 +55,6 @@ a {
 .home__download p {
     padding: 30px;
     color: white;
-    /*font-family: 'TwCenMTStd', sans-serif;*/
     font-size: 100%;
 }
 
@@ -75,7 +71,6 @@ a {
 }
 
 .home__button button {
-    /*font-family: 'TwCenMTStd', sans-serif;*/
     font-size: 2rem;
     text-decoration: none;
     padding: 20px 80px;
@@ -188,6 +183,7 @@ a {
     }
 }
 
+/* Mobile Section */
 @media only screen and (max-width: 300px) {
     .prev, .next, .text {
         font-size: 11px
@@ -199,11 +195,11 @@ a {
         font-size: 2rem;
     }
     
-    .home__container img {
-        width: 100%;
-    }
-    
     .home__button button {
         padding: 15px 25px;
+    }
+
+    img {
+        width: 100%;
     }
 }

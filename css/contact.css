@@ -36,6 +36,7 @@ body{
     font-size: 13vh;
 }
 
+/* Mobile Section */
 @media screen and (max-width: 720px) {
     .contact{
         height: auto;
