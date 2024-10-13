@@ -95,6 +95,13 @@ a {
     max-width: 1000px;
     position: relative;
     margin: 0 auto;
+    border: 15px white solid;
+}
+
+.screenImg {
+    max-width: 100%;
+    height: auto;
+    border: 15px white solid;
 }
 
 /* SLIDE SECTION*/
@@ -191,6 +198,10 @@ a {
 }
 
 @media screen and (max-width: 720px) {
+    .home__container img {
+        width: 75%;
+    }
+    
     .home__container p {
         font-size: 2rem;
     }
@@ -201,5 +212,6 @@ a {
 
     img {
         width: 100%;
+        border: 2px white solid;
     }
 }
