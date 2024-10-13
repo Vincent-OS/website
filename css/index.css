@@ -75,7 +75,6 @@ a {
 }
 
 .home__button button {
-    /*font-family: 'TwCenMTStd', sans-serif;*/
     font-size: 2rem;
     text-decoration: none;
     padding: 20px 80px;
@@ -100,6 +99,13 @@ a {
     max-width: 1000px;
     position: relative;
     margin: 0 auto;
+    border: 15px white solid;
+}
+
+.screenImg {
+    max-width: 100%;
+    height: auto;
+    border: 15px white solid;
 }
 
 /* SLIDE SECTION*/
@@ -188,6 +194,7 @@ a {
     }
 }
 
+/* Mobile Section */
 @media only screen and (max-width: 300px) {
     .prev, .next, .text {
         font-size: 11px
@@ -195,15 +202,20 @@ a {
 }
 
 @media screen and (max-width: 720px) {
+    .home__container img {
+        width: 75%;
+    }
+    
     .home__container p {
         font-size: 2rem;
     }
     
-    .home__container img {
-        width: 100%;
-    }
-    
     .home__button button {
         padding: 15px 25px;
+    }
+  
+    img {
+        width: 100%;
+        border: 2px white solid;
     }
 }

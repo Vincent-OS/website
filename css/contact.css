@@ -36,6 +36,11 @@ body{
     font-size: 13vh;
 }
 
+li {
+    list-style-type: none;
+}
+
+/* Mobile Section */
 @media screen and (max-width: 720px) {
     .contact{
         height: auto;
