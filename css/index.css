@@ -194,6 +194,36 @@ a {
     }
 }
 
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Casual {background-color: #5cba47;}
+#Professional {background-color: #1da1dc;}
+#Gaming {background-color: #af0000;}
+#AdminSystem {background-color: #000012;}
+
 /* Mobile Section */
 @media only screen and (max-width: 300px) {
     .prev, .next, .text {

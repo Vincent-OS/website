@@ -130,20 +130,47 @@
             </div>
             <br/> <br/> <br/> <br/>
             <center>
-                <img class="sizeImg" src="img/index/windowsCompatibility.png" alt="Notepad++ on Vincent OS">
-                <h2>Windows Compatibility*</h2>
-                <p>
-                    Vincent OS is designed to be compatible with Windows software and games. <br>
-                    You can install Windows software with Wine / Proton (Steam only) / Lutris. <br>
-                </p>
-                <br/> <br/> <br/> <br/>
-                <img class="sizeImg" src="img/index/flathub webpage.png" alt="Main Website of Flathub">
-                <h2>Vast software with Flatpak</h2>
-                <p>
-                    With Flatpak, you can install a vast software with a click of a button. <br>
-                </p>
+                <h2>Designed for everyone</h2>
+                <button class="tablink" onclick="openPage('Casual', this, '#5cba47')" id="defaultOpen">
+                    <img src="img/index/casual.png" alt="The default logo for guest account" style="height: 50px; width: 50px; vertical-align: middle;">
+                    Casual
+                </button>
+                <button class="tablink" onclick="openPage('Professional', this, '#1da1dc')">
+                    <img src="img/index/professional.png" alt="A simple business case" style="height: 50px; width: 50px; vertical-align: middle;">
+                    Professional
+                </button>
+                <button class="tablink" onclick="openPage('Gaming', this, '#af0000')">
+                    <img src="img/index/gaming.png" alt="A controlle" style="height: 50px; width: 50px; vertical-align: middle;">
+                    Gaming
+                </button>
+                <button class="tablink" onclick="openPage('AdminSystem', this, '#000012')">
+                    <img src="img/index/admin.png" alt="Vincent OS Logo" style="height: 50px; width: 50px; vertical-align: middle;">
+                    Admin System
+                </button>
+                <div id="Casual" class="tabcontent">
+                    <img class="sizeImg" src="img/index/flathub webpage.png" alt="Main Website of Flathub">
+                    <h3>Vast catalog of software with Flatpak</h3>
+                    <p>
+                        With Flatpak, you can install a vast software with a click of a button. <br>
+                    </p>
                 <a href="https://flathub.org/">Visit Flathub</a>
-                <br/> <br/>
+                </div>
+                <div id="Professional" class="tabcontent">
+                    <h3>Professional</h3>
+                    <p>Some news this fine day!</p>
+                </div>
+                <div id="Gaming" class="tabcontent">
+                    <h3>Windows Compatibility*</h3>
+                    <p>
+                        Vincent OS is designed to be compatible with Windows software and games. <br>
+                        You can install Windows software with Wine / Proton (Steam only) / Lutris. <br>
+                    </p>
+                </div>
+                <div id="AdminSystem" class="tabcontent">
+                    <h3>Admin System</h3>
+                    <p>Who we are and what we do.</p>
+                </div>
+                <br/> <br/> <br/> <br/>
                 <p style="font-size: 13px;">
                     * Some Windows applications may not run on Vincent OS. Refer to <a href="https://appdb.winehq.org/"> WineHQ - AppDB</a> | <a href="https://www.protondb.com/"> ProtonDB</a> and <a href="https://lutris.net/games"> Lutris</a> for compatibility information.
                 <p>
@@ -167,5 +194,6 @@
             </footer>
         </div>
         <script src="js/SlideShow.js"></script>
+        <script src="js/FullTabs.js"></script>
     </body>
 </html>
