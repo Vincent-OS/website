@@ -26,6 +26,7 @@
         <meta http-equiv='content-language' content='en-us'>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/download.css"/>
         <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
         <link rel="shortcut icon" href="/img/favicon.ico" />
@@ -131,6 +132,7 @@
             <br/> <br/> <br/> <br/>
             <center>
                 <h2>Designed for everyone</h2>
+                <br/>
                 <button class="tablink" onclick="openPage('Casual', this, '#5cba47')" id="defaultOpen">
                     <img src="img/index/casual.png" alt="The default logo for guest account" style="height: 50px; width: 50px; vertical-align: middle;">
                     Casual
@@ -153,13 +155,39 @@
                     <p>
                         With Flatpak, you can install a vast software with a click of a button. <br>
                     </p>
-                <a href="https://flathub.org/">Visit Flathub</a>
+                    <a href="https://flathub.org/">Visit Flathub</a>
+                    <br/> <br/>
+                    <img class="sizeImg" src="img/index/gnomeWeb.png" alt="Startpage on GNOME Web">
+                    <h3>Simple web browser</h3>
+                    <p>
+                        Navigate to your favorite websites with GNOME Web, a simple and fast web browser.
+                    </p>
                 </div>
                 <div id="Professional" class="tabcontent">
-                    <h3>Professional</h3>
-                    <p>Some news this fine day!</p>
+                    <img class="sizeImg" src="img/index/onlyoffice.png" alt="OnlyOffice Software">
+                    <h3>Edit all your documents with OnlyOffice**</h3>
+                    <p>
+                        Edit your Word, Excel, PowerPoint and PDF documents with OnlyOffice.
+                    </p>
+                    <br/> <br/>
+                    <img class="sizeImg" src="img/index/teams.png" alt="Portal for Microsoft Teams">
+                    <h3>Collaborate with your current video conferencing tools</h3>
+                    <p>
+                        Stay connected with your team by using your already existing video conferencing tools like Microsoft Teams, Zoom and more.**
+                    </p>
                 </div>
                 <div id="Gaming" class="tabcontent">
+                    <div class="gamingRow">
+                        <div class="gamingColumn">
+                            <img class="sizeImg" src="img/index/deadlock.jpg" alt="Deadlock Game">
+                        </div>
+                        <div class="gamingColumn">
+                            <img class="sizeImg" src="img/index/postal.jpg" alt="Postal 4 Game">
+                        </div>
+                        <div class="gamingColumn">
+                            <img class="sizeImg" src="img/index/minecraft.png" alt="Minecraft Game">
+                        </div>
+                    </div>
                     <h3>Windows Compatibility*</h3>
                     <p>
                         Vincent OS is designed to be compatible with Windows software and games. <br>
@@ -167,13 +195,36 @@
                     </p>
                 </div>
                 <div id="AdminSystem" class="tabcontent">
-                    <h3>Admin System</h3>
-                    <p>Who we are and what we do.</p>
+                    <img class="sizeImg" src="img/index/powershell.png" alt="PowerShell information">
+                    <h3>PowerShell by default</h3>
+                    <p>
+                        Vincent OS comes with PowerShell by default, unifying the power of PowerShell and the compatibility of bash.
+                    </p>
+                    <br/> <br/>
+                    <img class="sizeImg" src="img/index/clamtk.png" alt="ClamTk menu">
+                    <h3>Ship with ClamAV</h3>
+                    <p>
+                        To stay safe against viruses, Vincent OS ships with ClamAV.
+                    </p>
                 </div>
+                <br/> <br/> <br/>
+                <h2>Ready to Discover Vincent OS?</h2>
+                <p>
+                    Actually, Vincent OS is still in development. <br/>
+                    But you can download the Open Beta version of Vincent OS 1.0 and try it! <br/>
+                    Don't hesitate to report bugs and issues on <a href="https://github.com/Vincent-OS/issues/issues"> GitHub Issues</a>.
+                </p>
+                <br/>
+                <center>
+                    <button id="downloadButton" onclick="downloadVincentOS">
+                        <a href="https://repo.v38armageddon.net/vincent-os/iso/vincentOS-open-beta-1.0-x86_64.iso"> DOWNLOAD OPEN BETA </a>
+                    </button>
+                </center>
                 <br/> <br/> <br/> <br/>
                 <p style="font-size: 13px;">
-                    * Some Windows applications may not run on Vincent OS. Refer to <a href="https://appdb.winehq.org/"> WineHQ - AppDB</a> | <a href="https://www.protondb.com/"> ProtonDB</a> and <a href="https://lutris.net/games"> Lutris</a> for compatibility information.
-                <p>
+                    * Some Windows applications may not run on Vincent OS. Refer to <a href="https://appdb.winehq.org/"> WineHQ - AppDB</a> | <a href="https://www.protondb.com/"> ProtonDB</a> and <a href="https://lutris.net/games"> Lutris</a> for compatibility information. <br/>
+                    ** OnlyOffice, Microsoft Teams, Zoom are not included on the Operating System. You need to install them manually.
+                </p>
             </center>
             <!--FOOTER SECTION-->
             <!--I don't know, I don't fucking know why, but at all cost. DO NOT SEPARATE THE FOOTER PART TO THE DIV CLASS HOME PART-->
