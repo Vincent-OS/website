@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    background-color: var(--darkgray);
+}
+
+.error {
+    height: 80vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin:0px;
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+.error__container {
+    padding-top: 60px;
+}
+
+.error__container h1 {
+    font-size: 3rem;
+}
+
+.error__container h2 {
+    padding: 10px;
+}
+
+.error__container p {
+    padding: 40px;
+}
+
+.error__container a {
+    color: var(--white);
+    font-size: 1.3rem;
+}
