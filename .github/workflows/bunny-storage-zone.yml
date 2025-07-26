@@ -22,7 +22,7 @@ jobs:
         uses: R-J-dev/bunny-deploy@v2.0.6
         with:
           storage-zone-password: ${{ secrets.BUNNY_STORAGE_ZONE_PASSWORD }}
-          directory-to-upload: "./build"
+          directory-to-upload: "."
           storage-endpoint: "https://storage.bunnycdn.com"
           storage-zone-name: "vincent-os-website"
           # Limit the number of concurrent uploads to avoid overwhelming the server
