@@ -1,0 +1,32 @@
+# This GitHub Actions workflow is based on the following repository:
+# https://github.com/R-J-dev/bunny-deploy
+# License: MIT
+name: Deploy to Bunny.net Storage Zone
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to Bunny.net
+        uses: R-J-dev/bunny-deploy@v2.0.6
+        with:
+          storage-zone-password: ${{ secrets.BUNNY_STORAGE_ZONE_PASSWORD }}
+          directory-to-upload: "./build"
+          storage-endpoint: "https://storage.bunnycdn.com"
+          storage-zone-name: "vincent-os-website"
+          # Limit the number of concurrent uploads to avoid overwhelming the server
+          # In a theory of a worst case scenario, we should not exceed 10 concurrent uploads
+          # The Bunny.net API allows up to 50 concurrency uploads.
+          # If this number is too high, panic!
+          concurrency: 10
