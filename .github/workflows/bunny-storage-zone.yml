@@ -30,12 +30,3 @@ jobs:
           # The Bunny.net API allows up to 50 concurrency uploads.
           # If this number is too high, panic!
           concurrency: 10
-
-      - name: Remove .git and .github folder
-        run: |
-          curl -X DELETE \
-          -H "AccessKey: ${{ secrets.BUNNY_STORAGE_ZONE_PASSWORD }}" \
-          "https://storage.bunnycdn.com/vincent-os-website/.git" || true
-          curl -X DELETE \
-          -H "AccessKey: ${{ secrets.BUNNY_STORAGE_ZONE_PASSWORD }}" \
-          "https://storage.bunnycdn.com/vincent-os-website/.github" || true
