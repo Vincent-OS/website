@@ -9,12 +9,18 @@
 	<url>
 		<loc>https://vincent-os.v38armageddon.net/pages/download.html</loc>
 		<lastmod>2025-08-19T00:00:00+00:00</lastmod>
-		<changefreq>monthly</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.v38armageddon.net/pages/support.html</loc>
 		<lastmod>2025-08-19T00:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://vincent-os.v38armageddon.net/pages/mirrors.html</loc>
+		<lastmod>2026-02-10T00:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
