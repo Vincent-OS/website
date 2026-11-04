@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+    ==========================================================================
+    SUPPORT PAGE (support.html)
+    Order on screen, top to bottom:
+      1. Parallax background   (fixed, behind everything)
+      2. Header                (fixed black bar, "Support" underlined)
+      3. Support section       (title, intro, the four ways to get help)
+      4. Footer                (credits and licenses)
+      5. Scripts               (main.js)
+    Styles: css/main.css (shared) + css/support.css (this page only)
+    ==========================================================================
+-->
+<html lang="en">
+<head>
+    <!-- ===== PAGE SETTINGS ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SECURITY ===== (see index.html for what each line does) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ===== TITLE ===== -->
+    <title>Support - Vincent OS</title>
+
+    <!-- ===== STYLESHEETS ===== -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/support.css">
+    <link rel="icon" type="image/png" href="IMAGES/Vincent OS icon.png">
+    <link rel="apple-touch-icon" href="IMAGES/Vincent OS icon.png">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         1. PARALLAX BACKGROUND (same as every page; see index.html for details)
+         ========================================================================== -->
+    <div class="parallax" aria-hidden="true" data-parallax>
+        <div class="parallax__layer parallax__layer--4" data-depth="0.25"><img src="IMAGES/Metalheart assets/web/MH 4.webp" alt=""></div>
+        <div class="parallax__layer parallax__layer--3" data-depth="0.5"><img src="IMAGES/Metalheart assets/web/MH 3.webp" alt=""></div>
+        <div class="parallax__layer parallax__layer--2" data-depth="0.75"><img src="IMAGES/Metalheart assets/web/MH 2.webp" alt=""></div>
+        <div class="parallax__layer parallax__layer--1" data-depth="1"><img src="IMAGES/Metalheart assets/web/MH 1.webp" alt=""></div>
+    </div>
+
+    <!-- ==========================================================================
+         2. HEADER (aria-current="page" marks "Support" as the current page)
+         ========================================================================== -->
+    <header class="site-header">
+        <div class="site-header__bar">
+
+            <!-- Mobile "Menu" button (only visible on screens 760px wide or less) -->
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+                <span class="menu-toggle__icon"></span>
+                <span>Menu</span>
+            </button>
+
+            <!-- Navigation links -->
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="https://docs.v38armageddon.net/vincent-os/presentation.html">Documentation</a></li>
+                    <li><a href="https://blog.v38armageddon.net/vincent-os/">Blog</a></li>
+                    <li><a href="support.html" aria-current="page">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==========================================================================
+             3. SUPPORT SECTION
+             Title and intro (centered), then one card per way of getting help.
+             To add a card: copy an <article class="channel"> block.
+             Styles: css/support.css.
+             ========================================================================== -->
+        <section class="section support" aria-labelledby="support-title">
+            <div class="section__inner">
+
+                <!-- Title and intro -->
+                <div class="support__intro">
+                    <h1 id="support-title">Help and support</h1>
+                    <p>Having a problem when using Vincent OS? Don't worry, we're here to help! Our community is ready to assist you with any issues you may encounter. Just reach out to us and we'll do our best to resolve your problem!</p>
+                </div>
+
+                <h2 class="support__heading">How to contact us?</h2>
+
+                <!-- Contact cards -->
+                <div class="support__channels text-link">
+
+                    <!-- Card: Forum -->
+                    <article class="channel">
+                        <h3>Forum</h3>
+                        <p>The v38armageddon Forum is the best place to ask for help. You can create a topic in the Vincent OS section and we will be happy to assist you.</p>
+                        <p class="channel__link"><a href="https://forum.v38armageddon.net" target="_blank" rel="noopener noreferrer">Go to the forum</a></p>
+                    </article>
+
+                    <!-- Card: GitHub -->
+                    <article class="channel">
+                        <h3>GitHub</h3>
+                        <p>You can open an issue on GitHub to report a bug. It's the best way to report a problem and get help from the community.</p>
+                        <p class="channel__link"><a href="https://github.com/Vincent-OS/issues/issues" target="_blank" rel="noopener noreferrer">Open an issue</a></p>
+                    </article>
+
+                    <!-- Card: Reddit -->
+                    <article class="channel">
+                        <h3>Reddit</h3>
+                        <p>If you prefer to use Reddit to explain your problem, you can join the subreddit r/VincentOS.</p>
+                        <p class="channel__link"><a href="https://reddit.com/r/VincentOS" target="_blank" rel="noopener noreferrer">Join r/VincentOS</a></p>
+                    </article>
+
+                    <!-- Card: E-mail -->
+                    <article class="channel">
+                        <h3>E-mail</h3>
+                        <p>If you prefer, you can send us an e-mail. For a security issue, please use the security address.</p>
+                        <p class="channel__link"><a href="mailto:vincent-os@v38armageddon.net">vincent-os@v38armageddon.net</a></p>
+                        <p class="channel__link"><a href="mailto:security@v38armageddon.net">security@v38armageddon.net</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         4. FOOTER (year filled in by js/main.js)
+         ========================================================================== -->
+    <footer class="site-footer text-link">
+        <p>© 2022 - <span data-year></span> - v38armageddon - All Rights Reserved - <a href="https://www.v38armageddon.net/Terms-Of-Service" target="_blank" rel="noopener noreferrer">Terms of Service</a> - <a href="https://www.v38armageddon.net/Privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
+        <p>This website is using the <a href="https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12" target="_blank" rel="noopener noreferrer">EUPL</a> and the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">GPL-3.0</a> licenses.</p>
+    </footer>
+
+    <!-- ==========================================================================
+         5. SCRIPTS
+         ========================================================================== -->
+    <script src="js/main.js"></script>
+</body>
+</html>

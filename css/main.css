@@ -1,0 +1,496 @@
+/*
+    ==========================================================================
+    SHARED STYLES (css/main.css)
+    Loaded by every page, before the page's own CSS file.
+    Contents:
+      1. Fonts                             <- how to add the font files
+      2. Settings: colors and sizes        <- change colors / page width here
+      3. Base (whole page)
+      4. Parallax background
+      5. Basic elements (images, titles, buttons, green links)
+      6. Utilities (hidden text, keyboard focus)
+      7. Sections (page blocks)
+      8. Header and navigation
+      9. Notes (footnotes)
+     10. Footer
+     11. Phones (760px wide or less)
+    ==========================================================================
+*/
+
+
+/* ==========================================================================
+   1. FONTS
+   Which text uses which font is set in section 2 (--font-title, --font-heading,
+   --font-text). No font files are included: a font shows only if it is already
+   on the visitor's device. Otherwise the next font in the list is used.
+
+   To host Futura LT or Avenir with the site, put web-licensed font files in a
+   fonts folder and add one rule per file, like this:
+
+   @font-face {
+       font-family: "Futura LT";
+       src: url("../fonts/YOUR-FILE.woff2") format("woff2");
+       font-weight: 700;
+       font-display: swap;
+   }
+   ========================================================================== */
+
+
+/* ==========================================================================
+   2. SETTINGS: COLORS AND SIZES
+   Used everywhere with var(--name). Change a value here to change it site-wide.
+   ========================================================================== */
+
+:root {
+    /* Background colors */
+    --bg-dark: #1e292b;
+    --bg-mid: #283234;
+    --bg-light: #424d4f;
+    --black: #000000;
+    --panel: #0b0d0c;
+    --line: #252525;
+
+    /* Greens (buttons, links, underlines) */
+    --green: #4aaf44;
+    --green-light: #5cb84a;
+    --green-dark: #002900;
+
+    /* Text colors */
+    --white: #ffffff;
+    --muted: #787e7e;
+
+    /* Fonts (each list is tried in order, the first one available is used) */
+    --font-title: "Futura LT", "FuturaLT", "Futura LT Std", "Futura", "Century Gothic", "Segoe UI", system-ui, sans-serif;   /* H1, big titles */
+    --font-heading: "Avenir", "Avenir LT", "Avenir LT Std", "Avenir Next", "Segoe UI", system-ui, sans-serif;                /* H2 */
+    --font-text: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;                          /* everything else */
+
+    /* Sizes */
+    --header-height: 56px;   /* height of the black header bar */
+    --page-width: 1300px;    /* width of the content column; bigger = smaller side margins */
+    --gutter: 32px;          /* smallest side margin (16px on phones, see section 11) */
+}
+
+
+/* ==========================================================================
+   3. BASE (whole page)
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling; scroll-padding keeps anchors from hiding under the header */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 16px);
+}
+
+/* Default font, text size and text color */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--white);
+    background: var(--bg-dark);
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   4. PARALLAX BACKGROUND
+   The fixed tunnel behind every page (HTML: <div class="parallax">).
+   Image sizes and movement are set by js/main.js > PARALLAX.
+   ========================================================================== */
+
+/* Container fixed to the screen; the radial gradient shows through the layer holes */
+.parallax {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, var(--bg-dark) 0%, var(--panel) 45%);
+    pointer-events: none;
+}
+
+/* One layer (moved up by JavaScript when scrolling) */
+.parallax__layer {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+}
+
+/* Layer image (default before JavaScript resizes it) */
+.parallax__layer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+}
+
+/* Depth darkening: nearer layers are brighter, farther layers darker */
+.parallax__layer--1 {
+    filter: brightness(1);
+}
+
+.parallax__layer--2 {
+    filter: brightness(0.68);
+}
+
+.parallax__layer--3 {
+    filter: brightness(0.44);
+}
+
+.parallax__layer--4 {
+    filter: brightness(0.26);
+}
+
+
+/* ==========================================================================
+   5. BASIC ELEMENTS
+   ========================================================================== */
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Titles */
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* H1 and big titles use Futura LT */
+h1 {
+    font-family: var(--font-title);
+    font-weight: 700;
+}
+
+/* H2 uses Avenir */
+h2 {
+    font-family: var(--font-heading);
+}
+
+/* Paragraphs */
+p {
+    margin: 0;
+}
+
+/* Buttons use the page font */
+button {
+    font: inherit;
+    color: inherit;
+}
+
+/* Green underlined links inside text (any element with class="text-link") */
+a.text-link,
+.text-link a {
+    color: var(--green);
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-underline-offset: 3px;
+}
+
+a.text-link:hover,
+.text-link a:hover {
+    color: var(--green-light);
+    text-decoration-color: var(--green-light);
+}
+
+/* Code words (e.g. Get-FileHash on the download page) */
+code {
+    font-family: inherit;
+    color: var(--green-light);
+}
+
+
+/* ==========================================================================
+   6. UTILITIES
+   ========================================================================== */
+
+/* Text read by screen readers but not shown on screen */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Green outline when navigating with the keyboard */
+:focus-visible {
+    outline: 2px solid var(--green-light);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   7. SECTIONS (page blocks)
+   ========================================================================== */
+
+/* A page block: space above (leaves room for the header) and below */
+.section {
+    position: relative;
+    padding: calc(var(--header-height) + 90px) var(--gutter) 110px;
+}
+
+/* Centered content column inside a section */
+.section__inner {
+    max-width: var(--page-width);
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   8. HEADER AND NAVIGATION
+   HTML: <header class="site-header">. Mobile version: section 11.
+   ========================================================================== */
+
+/* Fixed to the top of the screen, above everything */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+/* The black bar (full width) */
+.site-header__bar {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--black);
+    pointer-events: auto;
+}
+
+/* Navigation area */
+.site-nav {
+    flex: 1;
+}
+
+/* Mobile "Menu" button: hidden on computers */
+.menu-toggle {
+    display: none;
+}
+
+/* Row of links. Side padding lines the links up with the page content
+   (the 22px matches the links' own padding below). */
+.site-nav ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0 max(16px, (100% - var(--page-width)) / 2 - 22px);
+    list-style: none;
+}
+
+/* One link */
+.site-nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 22px;
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Green underline (hidden by default) */
+.site-nav a::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 0;
+    height: 4px;
+    background: var(--green);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+/* Half underline on hover */
+.site-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* Full underline on the current page's link */
+.site-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+
+/* ==========================================================================
+   9. NOTES (footnotes above the footer)
+   ========================================================================== */
+
+.notes {
+    padding: 0 var(--gutter) 48px;
+    font-size: 12px;
+    color: var(--white);
+    text-align: center;
+}
+
+.notes p + p {
+    margin-top: 4px;
+}
+
+
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
+
+.site-footer {
+    padding: 40px var(--gutter);
+    background: var(--black);
+    font-size: 13px;
+    text-align: center;
+}
+
+.site-footer p + p {
+    margin-top: 8px;
+}
+
+
+/* ==========================================================================
+   11. PHONES (screens 760px wide or less)
+   Everything below only applies on small screens.
+   ========================================================================== */
+
+@media (max-width: 760px) {
+
+    /* Smaller side margin */
+    :root {
+        --gutter: 16px;
+    }
+
+    /* Slightly smaller text */
+    body {
+        font-size: 14px;
+    }
+
+    /* Less space around page blocks */
+    .section {
+        padding: calc(var(--header-height) + 48px) var(--gutter) 72px;
+    }
+
+    /* ----- Header: "Menu" button ----- */
+
+    .site-header__bar {
+        width: 100%;
+    }
+
+    /* Show the "Menu" button */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+        padding: 0 var(--gutter);
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+    /* The three-line icon (middle line) */
+    .menu-toggle__icon {
+        position: relative;
+        width: 22px;
+        height: 2px;
+        background: var(--white);
+        transition: background 0.2s ease;
+    }
+
+    /* The three-line icon (top and bottom lines) */
+    .menu-toggle__icon::before,
+    .menu-toggle__icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 2px;
+        background: var(--white);
+        transition: transform 0.2s ease;
+    }
+
+    .menu-toggle__icon::before {
+        top: -7px;
+    }
+
+    .menu-toggle__icon::after {
+        top: 7px;
+    }
+
+    /* Menu open: the three lines turn into an X */
+    .menu-toggle[aria-expanded="true"] .menu-toggle__icon {
+        background: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle__icon::before {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle__icon::after {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ----- Header: dropdown list of links ----- */
+
+    /* Hidden list under the bar */
+    .site-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--black);
+        border-top: 1px solid var(--line);
+    }
+
+    /* Shown when the menu is open (class added by js/main.js) */
+    .site-nav.is-open {
+        display: block;
+    }
+
+    /* Links stacked vertically */
+    .site-nav ul {
+        flex-direction: column;
+        height: auto;
+        padding: 8px 0 16px;
+    }
+
+    .site-nav a {
+        height: 48px;
+        padding: 0 var(--gutter);
+    }
+
+    /* Short underline on the left */
+    .site-nav a::after {
+        left: var(--gutter);
+        right: auto;
+        width: 64px;
+        transform-origin: left;
+    }
+}

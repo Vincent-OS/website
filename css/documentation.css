@@ -1,0 +1,34 @@
+/*
+    ==========================================================================
+    DOCUMENTATION PAGE STYLES (css/documentation.css)
+    Only used by documentation.html. Shared styles (header, footer, colors, parallax)
+    are in css/main.css.
+    Contents:
+      1. Main section
+      2. Phones (760px wide or less)
+    ==========================================================================
+*/
+
+/* ===== 1. MAIN SECTION ===== */
+
+/* Section box (min-height keeps the footer low on an empty page) */
+.documentation {
+    min-height: 70vh;
+}
+
+/* Page title */
+.documentation h1 {
+    margin: 0 0 48px 56px;
+    font-size: 24px;
+}
+
+/* ===== 2. PHONES (760px wide or less) ===== */
+
+@media (max-width: 760px) {
+
+    /* Page title: no indent, smaller */
+    .documentation h1 {
+        margin: 0 0 28px;
+        font-size: 20px;
+    }
+}
