@@ -153,7 +153,7 @@
 
 .cta {
     /* ----- Frame image measurements, in pixels of the image file -----
-       Update these if you replace "vincent os download button decor.png". */
+       Update these if you replace "vincent os download button decor.webp". */
     --frame-left: 224;          /* distance from the image's left edge to the window */
     --frame-top: 66;            /* distance from the image's top edge to the window */
     --frame-hole-width: 590;    /* width of the window */
