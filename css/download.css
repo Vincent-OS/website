@@ -1,170 +1,211 @@
 /*
- * Vincent OS Website, The website of Vincent OS.
- * Copyright (C) 2022 - 2024 - v38armageddon
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    Vincent OS Website, The website of Vincent OS.
+    Copyright (C) 2022 - 2024 - v38armageddon
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* HOME SECTION*/
-body{
-    background-color: var(--darkgray);
+
+/*
+    ==========================================================================
+    DOWNLOAD PAGE STYLES (css/download.css)
+    Only used by download.html. Shared styles are in css/main.css.
+    Contents:
+      1. Titles
+      2. Download section and packages table
+      3. Notes under the table
+      4. Verify section and checksum box
+      5. Phones (760px wide or less): table turns into cards
+    ==========================================================================
+*/
+
+
+/* ==========================================================================
+   1. TITLES ("Download Vincent OS" and "Verify downloaded file")
+   ========================================================================== */
+
+.download h1,
+.verify h2 {
+    margin: 0 0 48px 56px;
+    font-size: 24px;
 }
 
-li {
-    list-style-type: none;
+
+/* ==========================================================================
+   2. DOWNLOAD SECTION AND PACKAGES TABLE
+   ========================================================================== */
+
+/* Less space under the download section */
+.download {
+    padding-bottom: 72px;
 }
 
-a {
-    color: var(--lightgreen);
+/* The table */
+.packages {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
 }
 
-.download{
-    display: block;
+/* Column titles (version, architecture, release date) */
+.packages thead th {
+    padding: 0 20px 10px;
+    font-weight: 600;
     text-align: center;
-    padding: 4% 50px;
-    color: var(--white);
 }
 
-.download__v1 {
-    padding-bottom: 50px;
-    font-size: 1.3rem;
+/* Black line under each row */
+.packages tbody tr {
+    border-bottom: 1px solid var(--black);
 }
 
-.download__v1 p {
-    padding-top: 2%;
+/* Cell spacing */
+.packages tbody th,
+.packages tbody td {
+    padding: 16px 20px;
 }
 
-.download__legacy {
-    font-size: 1.3rem;
-    padding: 2%;
-    flex-wrap: wrap;
+/* Package name (first column) */
+.packages tbody th {
+    font-weight: 600;
+    text-align: left;
 }
 
-.download__legacy p {
-    padding-top: 2%;
+/* Version, architecture, date */
+.packages tbody td {
+    text-align: center;
 }
 
-.download__icons{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* "download" link (last column) */
+.packages tbody td:last-child {
+    text-align: right;
 }
 
-#legacy {
-    padding: 20px;
+
+/* ==========================================================================
+   3. NOTES UNDER THE TABLE (default login, upgrade info)
+   ========================================================================== */
+
+.download__notes {
+    margin-top: 28px;
+    padding: 0 20px;
+    font-size: 14px;
 }
 
-.download__github{
-    display: flex;
-    justify-content: flex-start;
-    color: var(--black);
-    align-items: center;
-    width: 250px;
-    height: 80px;
-    background-color: var(--white);
-    position: relative;
-    border: none;
-    flex-wrap: wrap;
-    margin: 20px;
-    padding-left: 10px;
-    cursor: pointer;
-    transition: 0.5s;
+.download__notes p + p {
+    margin-top: 6px;
 }
 
-.download__github button{
-    text-decoration: none;
-    border: none;
-    background-color: var(--white);
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    font-weight: bold;
+
+/* ==========================================================================
+   4. VERIFY SECTION AND CHECKSUM BOX
+   ========================================================================== */
+
+/* Paragraphs */
+.verify p {
+    max-width: 860px;
+    font-size: 15px;
 }
 
-.download__github:hover {
-    margin: 15px 20px 15px 20px;
+.verify p + p {
+    margin-top: 14px;
 }
 
-.download__github div{
-    font-size: 2rem;
-    color: var(--black);
+/* Dark box with a green bar on the left */
+.checksum {
+    max-width: 860px;
+    margin: 32px 0 0;
+    padding: 18px 20px;
+    background: rgba(0, 0, 0, 0.35);
+    border-left: 4px solid var(--green);
+    font-size: 14px;
 }
 
-#downloadButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 20px 80px;
-    border: none;
-    outline: none;
-    background: #6ccc57;
-    background: -webkit-linear-gradient(to top, #3b973f, #6ccc57);
-    background: linear-gradient(to top, #3b973f, #6ccc57);
-    cursor: pointer;
-    transition: 0.5s;
+/* File name (grey) */
+.checksum dt {
+    color: var(--muted);
 }
 
-#downloadButton a {
-    text-decoration: none;
-    color: white;
+/* Checksum (wraps on small screens) */
+.checksum dd {
+    margin: 4px 0 0;
+    word-break: break-all;
 }
 
-#downloadButton:hover {
-    background: var(--lightgreen);
-    box-shadow: 0 0 5px #6ccc57,
-    0 0 25px #6ccc57,
-    0 0 50px #6ccc57,
-    0 0 200px #6ccc57;
-}
 
-#downloadButtonLegacy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 20px 80px;
-    border: none;
-    outline: none;
-    background: #d88129;
-    background: -webkit-linear-gradient(to top, #c36d28, #d88129);
-    background: linear-gradient(to top, #c36d28, #d88129);
-    cursor: pointer;
-    transition: 0.5s;
-}
+/* ==========================================================================
+   5. PHONES (screens 760px wide or less)
+   Each table row becomes a card with small labels above the values.
+   ========================================================================== */
 
-#downloadButtonLegacy a {
-    text-decoration: none;
-    color: white;
-}
+@media (max-width: 760px) {
 
-#downloadButtonLegacy:hover {
-    background: #d88129;
-    box-shadow: 0 0 5px #d88129,
-    0 0 25px #d88129,
-    0 0 50px #d88129,
-    0 0 200px #d88129;
-}
-
-/* Mobile Section */
-@media screen and (max-width: 720px) {
-    .download {
-        margin-top: 100px;
+    /* Titles: no indent, smaller */
+    .download h1,
+    .verify h2 {
+        margin: 0 0 28px;
+        font-size: 20px;
     }
 
-    #legacy {
-        padding:30px 0px 0px 0px;
+    /* Hide the column titles (each value gets its own label instead) */
+    .packages thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    .packages,
+    .packages tbody {
+        display: block;
+    }
+
+    /* Row as a card: 3 small columns */
+    .packages tbody tr {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px 12px;
+        padding: 18px 0;
+    }
+
+    .packages tbody th,
+    .packages tbody td {
+        padding: 0;
+        text-align: left;
+    }
+
+    /* Package name across the whole card */
+    .packages tbody th {
+        grid-column: 1 / -1;
+        font-size: 15px;
+    }
+
+    /* Grey label above each value (taken from data-label in the HTML) */
+    .packages tbody td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 11px;
+        color: var(--muted);
+    }
+
+    /* "download" link across the whole card */
+    .packages tbody td:last-child {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .download__notes {
+        padding: 0;
     }
 }
