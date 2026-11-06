@@ -1,303 +1,567 @@
 /*
- * Vincent OS Website, The website of Vincent OS.
- * Copyright (C) 2022 - 2024 - v38armageddon
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    Vincent OS Website, The website of Vincent OS.
+    Copyright (C) 2022 - 2024 - v38armageddon
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* HOME SECTION */
-body {
-    background-color: var(--darkgray);
+
+/*
+    ==========================================================================
+    HOME PAGE STYLES (css/index.css)
+    Only used by index.html. Shared styles are in css/main.css.
+    Contents:
+      1. Hero / landing screen
+      2. Leaf                    <- leaf size and position settings
+      3. Hero text (logo, catchphrase)
+      4. DOWNLOAD button and frame  <- frame image measurements
+      5. About section
+      6. Sliders (shared by the gallery and the catalog bands)
+      7. Slider arrows
+      8. Gallery (not used right now: commented out in index.html)
+      9. Catalog bands (Casual / Gaming / Admin system)
+     10. Phones (760px wide or less)
+    ==========================================================================
+*/
+
+
+/* ==========================================================================
+   1. HERO / LANDING SCREEN
+   HTML: <section class="hero">
+   ========================================================================== */
+
+/* The landing screen: at least one full screen tall.
+   --art-w = width of the decorative layer (hero__art). */
+.hero {
+    --art-max: 200vw;
+    --art-w: min(var(--art-max), 2000px, (100% - 16px) / 0.697);
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow-x: clip;
 }
 
-h1 {
-    color: var(--white);
-    font-size: 2rem;
-    transition: 0.5s;
+/* Decorative layer on the right (holds the polka dots slot) */
+.hero__art {
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: var(--art-w);
+    aspect-ratio: 1280 / 1290;
+    z-index: 0;
+    pointer-events: none;
 }
 
-a {
-    color: #5cba47;
-}
-
-.home {
+/* Background drawing (not used right now: removed from index.html) */
+.hero__shape {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    height: 80vh;
-    background-image: radial-gradient(circle at bottom center, #1c7c70, #1d2f30 60%);
+    height: 100%;
+    opacity: 0.8;
 }
 
-.home__container {
-    display: block;
-    text-align: center;
-    padding-top: 80px;
-    /*font-family: 'TwCenMTStd', sans-serif;*/
+
+/* ==========================================================================
+   2. LEAF
+   HTML: <canvas class="hero__leaf">. The leaf itself is drawn by js/leaf.js.
+   This rule sets the box the leaf is drawn in.
+   ========================================================================== */
+
+.hero__leaf {
+    /* ----- Settings ----- */
+    --leaf-size: 1070px;   /* box size on screens 1440px wide or more */
+    --leaf-x: 81%;         /* horizontal center of the leaf */
+    --leaf-y: 50vh;        /* vertical center of the leaf */
+    --leaf-grow: 0.3;      /* how fast the box grows when the window gets narrower */
+    --leaf-shift: 0.15;    /* how fast the leaf slides toward the middle when narrower */
+
+    /* ----- Calculated from the settings (no need to edit) ----- */
+    --leaf-narrowing: max(0px, 1440px - 100vw);
+    --leaf-box: calc(var(--leaf-size) + var(--leaf-narrowing) * var(--leaf-grow));
+
+    position: absolute;
+    z-index: 0;
+    left: calc(var(--leaf-x) - var(--leaf-narrowing) * var(--leaf-shift) - var(--leaf-box) / 2);
+    top: calc(var(--leaf-y) - var(--leaf-box) / 2);
+    width: var(--leaf-box);
+    height: var(--leaf-box);
+    pointer-events: none;
 }
 
-.home__container p {
-    padding-top: 30px;
-    font-size: 2.5rem;
-    /*font-family: 'TwCenMTStd-MediumCond', sans-serif;*/
-}
 
-.home__download {
-    display: block;
-    text-align: center;
-    padding: 20px;
-}
+/* ==========================================================================
+   3. HERO TEXT (logo, catchphrase)
+   ========================================================================== */
 
-.home__download p {
-    padding: 30px;
-    color: white;
-    /*font-family: 'TwCenMTStd', sans-serif;*/
-    font-size: 100%;
-}
-
-.home__button {
+/* Column holding the logo block (top) and the DOWNLOAD button (bottom) */
+.hero__content {
+    position: relative;
+    z-index: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.home__button a {
-    text-decoration: none;
-    color: var(--black);
-}
-
-.home__button button {
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 20px 80px;
-    border: none;
-    outline: none;
-    background: #6ccc57;
-    background: -webkit-linear-gradient(to top, #3b973f, #6ccc57);
-    background: linear-gradient(to top, #3b973f, #6ccc57);
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.home__button button:hover {
-    background: var(--lightgreen);
-    box-shadow: 0 0 5px #6ccc57,
-        0 0 25px #6ccc57,
-        0 0 50px #6ccc57,
-        0 0 200px #6ccc57;
-}
-
-.sizeImg {
-    max-width: 1000px;
-    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 64px;
+    max-width: calc(var(--page-width) + 2 * var(--gutter));
+    min-height: 100vh;
+    min-height: 100svh;
     margin: 0 auto;
-    border: 15px white solid;
+    padding: calc(var(--header-height) + 72px) var(--gutter) 14vh;
 }
 
-.screenImg {
-    max-width: 100%;
+/* Vincent OS logo image */
+.hero__title img {
+    width: clamp(240px, 32vw, 458px);
     height: auto;
-    border: 15px white solid;
 }
 
-/* SLIDE SECTION*/
-.slideshow_container {
-    max-width: 1000px;
+/* Catchphrase under the logo */
+.hero__catchphrase {
+    max-width: 520px;
+    margin-top: 22px;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--white);
+}
+
+/* Small tagline (not used right now: the tagline is above the button, see .cta__label) */
+.hero__tagline {
+    margin-top: 14px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    opacity: 0.85;
+}
+
+
+/* ==========================================================================
+   4. DOWNLOAD BUTTON AND FRAME
+   HTML: <div class="cta">. The frame image sits inside the button and is
+   sized from it, so the button fills the frame's window exactly.
+   ========================================================================== */
+
+.cta {
+    /* ----- Frame image measurements, in pixels of the image file -----
+       Update these if you replace "vincent os download button decor.webp". */
+    --frame-left: 224;          /* distance from the image's left edge to the window */
+    --frame-top: 66;            /* distance from the image's top edge to the window */
+    --frame-hole-width: 590;    /* width of the window */
+    --frame-hole-height: 123;   /* height of the window */
+    --frame-width: 909;         /* full image width */
+    --frame-height: 239;        /* full image height */
+
     position: relative;
-    margin: 0 auto;
+    align-self: center;
+    width: min(340px, (100% - 16px) / 1.55);   /* button width */
+    transform: translateX(11%);                /* nudges the button + frame group to look centered */
+    text-align: center;
 }
 
-.prev,
-.next {
-    cursor: pointer;
+/* "[Run any app, any time]" above the button */
+.cta__label {
+    position: relative;
+    font-size: 14px;
+}
+
+/* The green DOWNLOAD button (same shape as the frame's window) */
+.cta__button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: var(--frame-hole-width) / var(--frame-hole-height);
+    margin-top: 40px;
+    padding: 0 24px;
+    background: var(--green);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Button text stays above the frame image */
+.cta__button span {
+    position: relative;
+}
+
+/* Frame image placed around the button (opacity = how visible the frame is) */
+.cta__frame {
+    position: absolute;
+    top: calc(var(--frame-top) / var(--frame-hole-height) * -100%);
+    left: calc(var(--frame-left) / var(--frame-hole-width) * -100%);
+    width: calc(var(--frame-width) / var(--frame-hole-width) * 100%);
+    height: calc(var(--frame-height) / var(--frame-hole-height) * 100%);
+    max-width: none;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* Hover: lighter green with a green glow */
+.cta__button:hover,
+.cta__button:focus-visible {
+    background: var(--green-light);
+    box-shadow: 0 0 0 1px var(--green-light), 0 0 36px rgba(92, 184, 74, 0.6);
+}
+
+
+/* ==========================================================================
+   5. ABOUT SECTION
+   HTML: <section class="section about">
+   ========================================================================== */
+
+/* Space around the section: 72px top and bottom, 16% of the screen on the sides */
+.about {
+    padding: 72px max(var(--gutter), 16vw);
+}
+
+/* Centered text column */
+.about__grid {
+    max-width: 760px;
+    text-align: center;
+}
+
+/* Title */
+.about__text h2 {
+    margin-bottom: 28px;
+    font-size: 20px;
+}
+
+/* Paragraph */
+.about__text p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================================
+   6. SLIDERS (shared by the gallery and the catalog bands)
+   Slides move sideways; js/main.js > SLIDERS adds "is-active" to the one shown.
+   ========================================================================== */
+
+/* Screenshot window (16:9) */
+.gallery__viewport,
+.band__viewport {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--black);
+    overflow: hidden;
+}
+
+/* One slide, waiting off-screen on the right */
+.slide {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    transform: translateX(100%);
+    transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* The slide on screen */
+.slide.is-active {
+    transform: none;
+}
+
+/* Text fade-in when the slide changes */
+.is-changing {
+    animation: caption-in 0.5s ease;
+}
+
+@keyframes caption-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Screenshot fills the window */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slide text is hidden here; JavaScript copies it into the caption area */
+.slide figcaption {
+    display: none;
+}
+
+
+/* ==========================================================================
+   7. SLIDER ARROWS (previous / next)
+   ========================================================================== */
+
+.arrow {
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 64px;
+    padding: 0;
+    background: none;
+    border: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
-.next {
-    right: 0;
+/* Arrow drawing */
+.arrow svg {
+    width: 16px;
+    height: 34px;
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 2;
+    transition: stroke 0.2s ease;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.arrow:hover svg {
+    stroke: var(--green-light);
 }
 
-.text {
-    color: white;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
+/* Left arrow */
+.arrow--prev {
+    left: 4px;
+}
+
+/* Right arrow */
+.arrow--next {
+    right: 4px;
+}
+
+/* Dark backing so arrows stay visible on light screenshots */
+.gallery .arrow,
+.band .arrow {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================================================
+   8. GALLERY (not used right now: commented out in index.html)
+   ========================================================================== */
+
+/* Text under the gallery */
+.gallery__caption {
+    min-height: 3.4em;
+    margin-top: 14px;
+    font-size: 12px;
     text-align: center;
 }
 
-.numbertext {
-    color: white;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+
+/* ==========================================================================
+   9. CATALOG BANDS (Casual / Gaming / Admin system)
+   HTML: <section class="section catalog"> containing <div class="band">.
+   ========================================================================== */
+
+/* Section with no side padding (bands go edge to edge).
+   --band-edge = space before the band text, lined up with the page content. */
+.catalog {
+    --band-edge: max(var(--gutter), (100% - var(--page-width)) / 2);
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-/* Style tab links */
-.tablink {
-    background-color: #555;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-}
-
-.tablink:hover {
-    background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-    color: white;
-    display: none;
-    padding: 100px 20px;
-    height: 100%;
-}
-
-#Casual {
-    background-color: #5cba47;
-}
-
-#Casual a {
-    color: #ffffff;
-}
-
-#Gaming {
-    background-color: #af0000;
-}
-
-#AdminSystem {
-    background-color: #000012;
-}
-
-.gamingRow {
+/* Sticky row of category buttons (not used right now: removed from index.html) */
+.catalog__nav {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 5;
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-/* Create four equal columns that sits next to each other */
-.gamingColumn {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+/* Category button (not used right now) */
+.tab {
+    min-width: 112px;
+    padding: 8px 28px;
+    background: var(--black);
+    color: var(--white);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-.gamingColumn img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+.tab:hover {
+    background: var(--line);
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .gamingColumn {
-        flex: 50%;
-        max-width: 50%;
-    }
+.tab[aria-current="true"] {
+    background: var(--green);
+    color: var(--green-dark);
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .gamingColumn {
-        flex: 100%;
-        max-width: 100%;
-    }
+/* One band: text column (1 part) + screenshot (2.4 parts), screenshot touching the right edge */
+.band {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2.4fr);
+    gap: 56px;
+    align-items: center;
+    padding: 64px 0 64px var(--band-edge);
+    scroll-margin-top: calc(var(--header-height) + 64px);
+    background: rgba(11, 13, 12, 0.55);
+    border-top: 1px solid rgba(74, 175, 68, 0.35);
 }
 
-/* Mobile Section */
-@media only screen and (max-width: 300px) {
-    .prev,
-    .next,
-    .text {
-        font-size: 11px
-    }
+/* Space between two bands */
+.band + .band {
+    margin-top: 48px;
 }
 
-@media screen and (max-width: 720px) {
-    .home__container img {
-        width: 75%;
+/* Reversed band (Gaming): screenshot on the left, touching the left edge */
+.band--reverse {
+    grid-template-columns: minmax(0, 2.4fr) minmax(260px, 1fr);
+    padding: 64px var(--band-edge) 64px 0;
+}
+
+.band--reverse .band__text {
+    order: 2;
+}
+
+/* Category name in green capitals ("CASUAL") */
+.band__label {
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+/* Caption area (filled from the slide's figcaption); min-height stops jumping */
+.band__caption {
+    min-height: 10em;
+}
+
+/* Slide title */
+.band__caption h2 {
+    font-size: 26px;
+}
+
+/* Slide text */
+.band__caption p {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Shadow under the screenshot */
+.band__viewport {
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==========================================================================
+   10. PHONES (screens 760px wide or less)
+   Everything below only applies on small screens.
+   ========================================================================== */
+
+@media (max-width: 760px) {
+
+    /* ----- Hero ----- */
+
+    .hero {
+        --art-max: 380vw;
     }
 
-    .home__container p {
-        font-size: 2rem;
-    }
-
-    .home__button button {
-        padding: 15px 25px;
-    }
-
-    img {
+    /* Leaf fills the screen under the header */
+    .hero__leaf {
+        left: 0;
+        top: var(--header-height);
         width: 100%;
+        height: calc(100svh - var(--header-height));
+    }
+
+    /* Logo pushed lower */
+    .hero__content {
+        gap: 48px;
+        padding-top: calc(var(--header-height) + 32px + var(--art-w) * 0.415);
+        padding-bottom: 12vh;
+    }
+
+    .hero__title img {
+        width: min(300px, 80vw);
+    }
+
+    .hero__catchphrase {
+        font-size: 16px;
+    }
+
+    /* ----- DOWNLOAD button ----- */
+
+    .cta__button {
+        margin-top: 28px;
+        font-size: 22px;
+    }
+
+    /* ----- About ----- */
+
+    .about {
+        padding: 48px var(--gutter);
+    }
+
+    .about__text h2 {
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    /* ----- Catalog bands ----- */
+
+    .catalog__nav {
+        margin-bottom: 24px;
+    }
+
+    .tab {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+    /* Bands stack: text on top, screenshot full width below */
+    .band,
+    .band--reverse {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    .band--reverse .band__text {
+        order: 0;
+    }
+
+    .band__text {
+        padding: 0 var(--gutter);
+    }
+
+    .band__caption {
+        min-height: 9em;
+    }
+
+    .band__caption h2 {
+        font-size: 19px;
+    }
+
+    .band__caption p {
+        font-size: 14px;
     }
 }
